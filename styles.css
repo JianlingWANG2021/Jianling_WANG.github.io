@@ -1,0 +1,146 @@
+/* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    background: #1e294b;
+    color: white;
+    padding: 50px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+/* Navigation */
+nav {
+    position: fixed;
+    top: 180px;
+    width: 100%;
+    background: #336175;
+    padding: 1px 0;
+    z-index: 99;
+}
+
+nav ul {
+    list-style: none;
+    padding: 10;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+nav ul li {
+    padding: 15px 20px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+/* Dropdown Menu */
+.nav-item.dropdown {
+    position: relative;
+}
+
+.nav-item.dropdown .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #475569;
+    list-style: none;
+    padding: 0;
+    width: 220px;
+    text-align: left;
+}
+
+.nav-item.dropdown .dropdown-menu li {
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.nav-item.dropdown .dropdown-menu li:hover {
+    background: #facc15;
+    color: #1e293b;
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+
+
+/* Active Navigation */
+nav ul li.active {
+    background: #facc15;
+    color: #1e293b;
+}
+
+/* Main Content */
+main {
+    margin-top: 260px; /* 确保不会被 header 和 nav 遮挡 */
+    min-height: calc(100vh - 300px); /* 确保 main 至少占据屏幕可视高度 */
+    overflow-y: auto;
+    justify-content: center;
+    flex-grow: 1; /* 让 main 自动填充剩余空间 */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 让内容居中 */
+}
+
+/* Centered Content */
+.container {
+    width: 80%;
+    max-width: 900px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 让内部内容也居中 */
+    text-align: center; /* 让文本内容居中 */
+}
+
+/* Section Content */
+.content-section {
+    display: none;
+    padding: 20px;
+    text-align: left;
+}
+
+.content-section.active {
+    display: block;
+}
+
+/* Footer */
+
+footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #000;
+    color: white;
+    text-align: center;
+    padding: -1px;
+}
+
+
