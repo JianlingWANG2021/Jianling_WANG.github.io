@@ -106,8 +106,8 @@ main {
 
 /* Centered Content */
 .container {
-    width: 80%;
-    max-width: 900px;
+    width: 90%;
+    max-width: 1024px;
     background: white;
     padding: 20px;
     border-radius: 10px;
