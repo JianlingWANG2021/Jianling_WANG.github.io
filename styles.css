@@ -144,3 +144,47 @@ footer {
 }
 
 
+#qa-container {
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+#qa-container input {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#qa-container button {
+    padding: 10px 15px;
+    border: none;
+    background: #336175;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#qa-container button:hover {
+    background: #1e294b;
+}
+
+#qa-list {
+    list-style: none;
+    padding: 0;
+}
+
+#qa-list li {
+    background: #f4f4f4;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+

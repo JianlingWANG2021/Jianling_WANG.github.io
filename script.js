@@ -57,3 +57,79 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    loadQA();  // 页面加载时获取历史问答
+});
+
+function submitQuestion() {
+    const questionInput = document.getElementById("question-input");
+    const questionText = questionInput.value.trim();
+
+    if (questionText === "") {
+        alert("Please enter a question!");
+        return;
+    }
+
+    const qaList = document.getElementById("qa-list");
+    const li = document.createElement("li");
+    li.innerHTML = `<strong>Q:</strong> ${questionText} <br> <strong>A:</strong> <span class="answer">Waiting for response...</span> 
+                    <button onclick="replyToQuestion(this)">Reply</button>`;
+    qaList.appendChild(li);
+
+    saveQA();
+    questionInput.value = "";  // 清空输入框
+}
+
+function replyToQuestion(button) {
+    const answerSpan = button.previousElementSibling;
+    const answer = prompt("Enter your reply:");
+    if (answer) {
+        answerSpan.textContent = answer;
+        saveQA();
+    }
+}
+
+// 保存问答数据到 localStorage
+function saveQA() {
+    const qaList = document.getElementById("qa-list").innerHTML;
+    localStorage.setItem("qaData", qaList);
+}
+
+// 加载问答数据
+function loadQA() {
+    const savedQA = localStorage.getItem("qaData");
+    if (savedQA) {
+        document.getElementById("qa-list").innerHTML = savedQA;
+    }
+}
+
+
+function submitQuestion() {
+    const questionInput = document.getElementById("question-input");
+    const questionText = questionInput.value.trim();
+
+    if (questionText === "") {
+        alert("Please enter a question!");
+        return;
+    }
+
+    const qaList = document.getElementById("qa-list");
+    const li = document.createElement("li");
+
+    li.innerHTML = `<strong>Q:</strong> ${questionText} <br> 
+                    <strong>A:</strong> <span class="answer">Waiting for response...</span> 
+                    <button onclick="replyToQuestion(this)">Reply</button>
+                    <button onclick="deleteQuestion(this)">Delete</button>`;
+    qaList.appendChild(li);
+
+    saveQA();
+    questionInput.value = "";  // 清空输入框
+}
+
+function deleteQuestion(button) {
+    button.parentElement.remove();  // 删除当前问题
+    saveQA();  // 更新存储数据
+}
+

@@ -10,7 +10,8 @@
 
     <!-- Header -->
     <header>
-        <h1>Jianling Wang</h1> <h5>Ingenieur en Calcul Scientifique,  Institut Denis Poisson, France</h5>
+        <h1>Jianling Wang</h1> 
+        <h3>Ingenieur en Calcul Scientifique,  Institut Denis Poisson, France</h3>
     </header>
 
     <!-- Main Navigation Menu -->
@@ -31,6 +32,7 @@
             <li class="nav-item" onclick="showSection('skills', this)">Skills & Technologies</li>
             <li class="nav-item" onclick="showSection('publications', this)">Publications</li>
             <li class="nav-item" onclick="showSection('contact', this)">Contact</li>
+            <li class="nav-item" onclick="showSection('qa', this)">Questions/Answers</li>
         </ul>
     </nav>
 
@@ -323,6 +325,25 @@
                 <h2>Contact</h2>
                 <p>If you’d like to reach out for collaboration or inquiries, feel free to email me at: <strong>contact@example.com</strong></p>
             </section>
+
+
+
+           <section id="qa" class="content-section">
+               <h2>Question/Answers</h2>
+               <div id="qa-container">
+              	  <h3>Ask a Question</h3>
+           	  <input type="text" id="question-input" placeholder="Enter your question here..." />
+           	  <button onclick="submitQuestion()">Submit</button>
+ 
+           	  <h3>Questions & Answers</h3>
+           	  <ul id="qa-list"></ul>
+               </div>
+           </section>
+
+
+
+
+
         </div>
     </main>
 
