@@ -10,7 +10,7 @@
 
     <!-- Header -->
     <header>
-        <h1>Jianling Wang</h1>
+        <h1>Jianling Wang</h1> <h5>Ingenieur en Calcul Scientifique,  Institut Denis Poisson, France</h5>
     </header>
 
     <!-- Main Navigation Menu -->
@@ -116,10 +116,35 @@
             <section id="high-performance-computing" class="content-section">
                 <h2>High-Performance Computing (HPC)</h2>
                 <p>HPC enables solving computationally intensive problems by using parallel computing frameworks and supercomputers. My research involves:</p>
+               <!--
                 <ul>
                     <li>Optimization of large-scale simulations and modelisation</li>
                     <li>Parallel computing with MPI and CUDA.</li>
                 </ul>
+               -->
+
+                <h4> Large scale Nbody-hydrodynamical code development </h4>
+
+		    To study the effect of hydrodynamical process in the gas
+		    during the galaxy formation and evolution, we have developed simulation code by
+		    implementing new physical modular to dealing with gas, e.g.  star formation,
+		    cooling, feedback.  These physical processes are implemented into two public
+		    simulation code, GIZIMO & GADGET-2 for cosmological and galaxy formation, which
+		    are written in C and MPI for massive-parallel calculations.
+
+                <h4> Parallel computing with MPI and CUDA  </h4>
+
+		I wrote codes to derive stellar physical parameters (distance, stellar age,
+		mass, extinction, effective temperature, metallicity, logg) for individual
+		stars observed by LAMOST, which are important parameters for the Astronomers
+		use LAMOST data for scientific studies.  I used the Bayesian theorem plus prior
+		galactic knowledge to derive these stellar parameters. The code was written in
+		C language with multidimensional integration, which is impossible to run with a
+		single computer for a few million stars. To solve this problem, I developed
+		this code with MPI to use massively parallel computing. I also developed a CUDA
+		version of the code with GPU computing, a single NVIDIA graphics device can
+		achieve high performance.
+
             </section>
 
             <!-- Numerical Simulations -->
@@ -147,11 +172,38 @@
             <section id="deep-learning" class="content-section">
                 <h2>Deep Learning in Scientific Research</h2>
                 <p>Deep learning has revolutionized how we process complex data. My contributions include:</p>
+                <!--
                 <ul>
                     <li><a href="https://github.com/JianlingWANG2021/SGSST">SGSST: Scaling Gaussian Splatting Style Transfer"> </a></li>
                     <li>Deep learning with Knee disease classification </li>
                     <li>Machine learning for stellar parameter measurements </li>
                 </ul>
+                -->
+                <h4> Deep learning in neural field  and style transfering for 3D</h4>   
+
+		Applying style transfer to a full 3D environment is a chal- lenging task that
+		has seen many developments since the advent of neural rendering. 3D Gaussian
+		splatting (3DGS) has recently pushed further many limits of neural rendering
+		in terms of training speed and reconstruction quality. This work introduces
+		SGSST: Scaling Gaussian Splatting Style Transfer, an optimization-based method
+		to apply style transfer to pretrained 3DGS scenes. We demonstrate that a new
+		multiscale loss based on global neural statistics, that we name SOS for
+		Simultaneously Optimized Scales, enables style transfer to ultra-high
+		resolution 3D scenes. Not only SGSST pioneers 3D scene style transfer at such
+		high image resolutions, it also produces superior visual quality as assessed by
+		thorough qualitative, quantitative and perceptual comparisons.
+
+                <h4>Machine learning applications in astrophysics </h4>
+                <p>
+		I used ML to measure stellar metallicity with photometric data.
+	        Without time-consuming spectra observation, I can acheive accurate metallicity
+	        for faint stars. 
+	        </p>
+
+                <p> Combining ML,  Markov chain Monte Carlo (MCMC), and N-body simulations, I developed a technique to improved the orbital trajector of multi-galaxies merger history.   </p>
+
+
+
             </section>
 
             <!-- Research & Projects -->
@@ -180,20 +232,76 @@
             <section id="publications" class="content-section">
                 <h2>Publications & Scientific Contributions</h2>
                 <h3>First-Authored Publications (12)</h3>
-                <ul>
-                    <li>Wang Jianling et al., 2024, MNRAS, 527, 7144 - "The accretion history of the Milky Way: III. Hydrodynamical simulations of Galactic dwarf galaxies at first infall"</li>
-                    <li>Wang Jianling et al., 2023, RAA, 23, 025020 - "Determination of Distance, Extinction, Mass, and Age for Stars in LAMOST DR7"</li>
-                    <li>Wang Jianling et al., 2022, MNRAS, 515, 940 - "Lessons from the Magellanic System and its modeling"</li>
-                    <li>Wang Jianling et al., 2022, MNRAS, 510, 2242 - "Milky Way total Mass derived by Rotation Curve and Globular Cluster kinematics from Gaia EDR3"</li>
-                    <li>Wang Jianling et al., 2020, MNRAS, 498, 2766 - "A recent major merger tale for the closest giant elliptical galaxy Centaurus A"</li>
-                    <li>Wang Jianling et al., 2019, MNRAS, 486, 5907 - "Towards a complete understanding of the Magellanic Stream Formation"</li>
-                    <li>Wang Jianling et al., 2016, MNRAS, 460, 3179 - "Distance and extinction determination for APOGEE stars with Bayesian method"</li>
-                    <li>Wang Jianling et al., 2016, MNRAS, 456, 672 - "Measure the distance and extinction for stars in LAMOST survey with Bayesian method"</li>
-                    <li>Wang Jianling et al., 2015, MNRAS, 452, 3551 - "The NGC 4013 tale: a pseudo-bulged, late-type spiral shaped by a major merger"</li>
-                    <li>Wang Jianling et al., 2012, A&A, 538, 121W - "Loops formed by tidal tails as fossil records of a major merger"</li>
-                    <li>Wang Jianling, 2008, ChJAA, 8, 643 - "Infrared Galaxies in the Nearby Universe"</li>
-                    <li>Wang Jianling et al., 2006, ApJ, 649, 722 - "Luminous Infrared Galaxies in the Local Universe"</li>
-                </ul>
+
+			    <ol>
+
+			    <li>
+				Wang Jianling et al., 2024, MNRAS, 527, 7144<br>
+				<em>“The accretion history of the Milky Way: III. Hydrodynamical simulations of Galactic dwarf galaxies at first infall”</em>
+                                <br><br>
+			    </li>
+			    <li>
+				Wang Jianling et al., 2023, RAA, 23, 025020<br>
+				<em>“Determination of Distance, Extinction, Mass, and Age for Stars in LAMOST DR7”</em>
+                                <br><br>
+			    </li>
+			    <li>
+				Wang Jianling et al., 2022, MNRAS, 515, 940<br>
+				<em>“Lessons from the Magellanic System and its modeling”</em>
+                                <br><br>
+			    </li>
+			    <li>
+				Wang Jianling et al., 2022, MNRAS, 510, 2242<br>
+				<em>“Milky Way total Mass derived by Rotation Curve and Globular Cluster kinematics from Gaia EDR3”</em>
+                                <br><br>
+			    </li>
+			    <li>
+				Wang Jianling et al., 2020, MNRAS, 498, 2766<br>
+				<em>“A recent major merger tale for the closest giant elliptical galaxy Centaurus A”</em>
+                                <br><br>
+			    </li>
+			    <li>
+				Wang Jianling et al., 2019, MNRAS, 486, 5907<br>
+				<em>“Towards a complete understanding of the Magellanic Stream Formation”</em>
+                                <br><br>
+			    </li>
+			    <li>
+				Wang Jianling et al., 2016, MNRAS, 460, 3179<br>
+				<em>“Distance and extinction determination for APOGEE stars with Bayesian method”</em>
+                                <br><br>
+			    </li>
+			    <li>
+				Wang Jianling et al., 2016, MNRAS, 456, 672<br>
+				<em>“Measure the distance and extinction for stars in LAMOST survey with Bayesian method”</em>
+                                <br><br>
+			    </li>
+			    <li>
+				Wang Jianling et al., 2015, MNRAS, 452, 3551<br>
+				<em>“The NGC 4013 tale: a pseudo-bulged, late-type spiral shaped by a major merger”</em>
+                                <br><br>
+			    </li>
+			    <li>
+				Wang Jianling et al., 2012, A&A, 538, 121W<br>
+				<em>“Loops formed by tidal tails as fossil records of a major merger”</em>
+                                <br><br>
+			    </li>
+			    <li>
+				Wang Jianling, 2008, ChJAA, 8, 643<br>
+				<em>“Infrared Galaxies in the Nearby Universe”</em>
+                                <br><br>
+			    </li>
+			    <li>
+				Wang Jianling et al., 2006, ApJ, 649, 722<br>
+				<em>“Luminous Infrared Galaxies in the Local Universe”</em>
+			    </li>
+			</ol>
+
+
+
+
+
+
+
                 <h3>Co-Authored Publications (33) </h3>
                 <ul>
                     <li>Akib, Istiak et al., 2025, A&A, 694, A66 - "An intriguing coincidence between the majority of vast polar structure dwarfs and a recent major merger at the M31 position"</li>
